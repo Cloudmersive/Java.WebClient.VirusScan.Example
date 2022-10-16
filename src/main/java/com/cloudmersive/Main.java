@@ -40,7 +40,7 @@ public class Main {
                 System.err.println("Exception when calling ScanApi#scanFile");
                 e.printStackTrace();
             }
-
+            System.out.println("Done.");
 
         }
         catch (Exception e)
