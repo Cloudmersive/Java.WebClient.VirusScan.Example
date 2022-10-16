@@ -20,22 +20,17 @@ public class Main {
 
         try
         {
-            // Customer
-
-            ApiClient defaultClient = new ApiClient();
-
-            // Configure API key authorization: Apikey
-            defaultClient.setApiKey("YOUR-KEY");
 
             
             ScanApi apiInstance = new ScanApi();
+            apiInstance.getApiClient().setApiKey("YOUR-API-KEY");
                         
             ByteArrayResource inputStream = new ByteArrayResource(new byte[100]);
             
             try 
             {
-                Mono<VirusScanResult> result = apiInstance.scanFile(inputStream);
-                System.out.println(result.block().toString());
+                VirusScanResult result = apiInstance.scanFile(inputStream).block();
+                System.out.println(result.toString());
             } catch (Exception e) {
                 System.err.println("Exception when calling ScanApi#scanFile");
                 e.printStackTrace();
