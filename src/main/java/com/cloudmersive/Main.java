@@ -4,6 +4,7 @@ import com.cloudmersive.client.gac.invoker.*;
 import com.cloudmersive.client.gac.invoker.auth.*;
 import com.cloudmersive.client.gac.model.*;
 import com.cloudmersive.client.gac.ScanApi;
+import com.cloudmersive.client.gac.invoker.Configuration;
 import java.io.*;
 import org.springframework.core.io.*;
 
