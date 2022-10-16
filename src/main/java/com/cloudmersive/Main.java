@@ -19,11 +19,10 @@ public class Main {
         {
             // Customer
 
-            ApiClient defaultClient = Configuration.getDefaultApiClient();
+            ApiClient defaultClient = new ApiClient();
 
             // Configure API key authorization: Apikey
-            ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
-            Apikey.setApiKey("YOUR-KEY");
+            defaultClient.setApiKey("YOUR-KEY");
 
             
             ScanApi apiInstance = new ScanApi();
