@@ -35,7 +35,7 @@ public class Main {
             try 
             {
                 Mono<VirusScanResult> result = apiInstance.scanFile(inputStream);
-                System.out.println(result);
+                System.out.println(result.block().toString());
             } catch (Exception e) {
                 System.err.println("Exception when calling ScanApi#scanFile");
                 e.printStackTrace();
