@@ -3,9 +3,13 @@ package com.cloudmersive;
 import com.cloudmersive.client.gac.invoker.*;
 import com.cloudmersive.client.gac.invoker.auth.*;
 import com.cloudmersive.client.gac.model.*;
+
+import reactor.core.publisher.Mono;
+
 import com.cloudmersive.client.gac.ScanApi;
 import java.io.*;
 import org.springframework.core.io.*;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 
 public class Main {
 
@@ -30,7 +34,7 @@ public class Main {
             
             try 
             {
-                VirusScanResult result = apiInstance.scanFile(inputStream);
+                Mono<VirusScanResult> result = apiInstance.scanFile(inputStream);
                 System.out.println(result);
             } catch (Exception e) {
                 System.err.println("Exception when calling ScanApi#scanFile");
