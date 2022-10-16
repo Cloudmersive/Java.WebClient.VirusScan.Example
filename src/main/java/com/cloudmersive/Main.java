@@ -1,9 +1,11 @@
 package com.cloudmersive;
 
-import com.cloudmersive.client.*;
-import com.cloudmersive.client.model.*;
-import com.cloudmersive.client.invoker.*;
-import com.cloudmersive.client.invoker.auth.*;
+import com.cloudmersive.client.gac.invoker.ApiClient;
+import com.cloudmersive.client.gac.invoker.ApiException;
+import com.cloudmersive.client.gac.invoker.Configuration;
+import com.cloudmersive.client.gac.invoker.auth.*;
+import com.cloudmersive.client.gac.invoker.models.*;
+import com.cloudmersive.client.gac.ScanApi;
 import java.io.*;
 
 public class Main {
