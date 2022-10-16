@@ -1,8 +1,6 @@
 package com.cloudmersive;
 
-import com.cloudmersive.client.gac.invoker.ApiClient;
-import com.cloudmersive.client.gac.invoker.ApiException;
-import com.cloudmersive.client.gac.invoker.Configuration;
+import com.cloudmersive.client.gac.invoker.*;
 import com.cloudmersive.client.gac.invoker.auth.*;
 import com.cloudmersive.client.gac.invoker.models.*;
 import com.cloudmersive.client.gac.ScanApi;
@@ -35,7 +33,7 @@ public class Main {
             {
                 VirusScanResult result = apiInstance.scanFile(inputStream);
                 System.out.println(result);
-            } catch (ApiException e) {
+            } catch (Exception e) {
                 System.err.println("Exception when calling ScanApi#scanFile");
                 e.printStackTrace();
             }
