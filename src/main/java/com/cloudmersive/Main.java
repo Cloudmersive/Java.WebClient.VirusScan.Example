@@ -25,9 +25,8 @@ public class Main {
 
             
             ScanApi apiInstance = new ScanApi();
-            File inputFile = new File("C:\\Users\\Administrator\\Documents\\GitHub\\Cloudmersive-Java-VirusScan-Example\\pdf1.pdf"); // File | Input file to perform the operation on.
-            
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(new byte[100]);
+                        
+            ByteArrayResource inputStream = new ByteArrayResource(new byte[100]);
             
             try 
             {
